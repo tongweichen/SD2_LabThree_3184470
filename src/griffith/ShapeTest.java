@@ -18,4 +18,28 @@ public class ShapeTest {
         Circle c = new Circle("Circle", 3);
         assertEquals(2 * Math.PI * 3, c.perimeter(), EPSILON);
     }
+
+    @Test
+    public void testCircleToString() {
+        Circle c = new Circle("Circle", 3);
+        assertTrue(c.toString().contains("radius=3"));
+    }
+
+    @Test
+    public void testRhombusArea() {
+        Rhombus r = new Rhombus("Rhombus", 4, 3);
+        assertEquals(12, r.area(), EPSILON);
+    }
+
+    @Test
+    public void testRhombusPerimeter() {
+        Rhombus r = new Rhombus("Rhombus", 4, 3);
+        assertEquals(16, r.perimeter(), EPSILON);
+    }
+
+    @Test
+    public void testRhombusToString() {
+        Rhombus r = new Rhombus("Rhombus", 4, 3);
+        assertTrue(r.toString().contains("side=4"));
+    }
 }
