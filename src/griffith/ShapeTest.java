@@ -7,6 +7,7 @@ public class ShapeTest {
 
     private static final double EPSILON = 0.1;
 
+
     @Test
     public void testCircleArea() {
         Circle c = new Circle("Circle", 3);
@@ -25,6 +26,8 @@ public class ShapeTest {
         assertTrue(c.toString().contains("radius=3"));
     }
 
+
+
     @Test
     public void testRhombusArea() {
         Rhombus r = new Rhombus("Rhombus", 4, 3);
@@ -41,5 +44,24 @@ public class ShapeTest {
     public void testRhombusToString() {
         Rhombus r = new Rhombus("Rhombus", 4, 3);
         assertTrue(r.toString().contains("side=4"));
+    }
+
+
+    @Test
+    public void testTriangleArea() {
+        RightAngledTriangle t = new RightAngledTriangle("Triangle", 3, 4);
+        assertEquals(6, t.area(), EPSILON);
+    }
+
+    @Test
+    public void testTrianglePerimeter() {
+        RightAngledTriangle t = new RightAngledTriangle("Triangle", 3, 4);
+        assertEquals(12, t.perimeter(), EPSILON); // 3 + 4 + 5
+    }
+
+    @Test
+    public void testTriangleToString() {
+        RightAngledTriangle t = new RightAngledTriangle("Triangle", 3, 4);
+        assertTrue(t.toString().contains("base=3"));
     }
 }
