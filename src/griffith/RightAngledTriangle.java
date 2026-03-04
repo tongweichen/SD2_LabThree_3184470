@@ -28,4 +28,5 @@ public class RightAngledTriangle extends Shape {
                 ", base=" + base +
                 ", height=" + height;
     }
+    
 }
